@@ -1,12 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import multer from 'multer';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import postRoutes from './routes/posts.js';
 import userRoutes from './routes/users.js';
-import fs from 'fs';
+
 
 const app = express();
 dotenv.config();
