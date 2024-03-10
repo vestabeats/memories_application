@@ -1,24 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import {Provider} from 'react-redux'
-import { createStore , applyMiddleware, compose} from 'redux'
-import thunk from 'redux-thunk'
-import reducers from './reducers'
-import './index.css'
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import reducers from './reducers';
+import './index.css';
 import App from './App';
-import {disableReactDevTools} from '@fvilers/disable-react-devtools'
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
-if(process.env.NODE_ENV==='production') disableReactDevTools()
+if (process.env.NODE_ENV === 'production') disableReactDevTools();
 
-const store = createStore(reducers, compose(applyMiddleware(thunk)))
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const store = createStore(reducers, compose(applyMiddleware(thunk)));
+
+ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <App />
+      <App />
     </Provider>
-    
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
-
