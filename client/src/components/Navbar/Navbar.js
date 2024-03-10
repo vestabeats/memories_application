@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AppBar, Typography, Toolbar, Button, Avatar } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import memoriesLogo from '../../images/memories-Logo.png';
-import memoriesText from '../../images/memories-Text.png';
+import memoriesText from '../../images/marvpixels.png';
 import useStyles from './styles';
 import { useDispatch } from 'react-redux';
 import { useNavigate, useLocation } from 'react-router-dom';
