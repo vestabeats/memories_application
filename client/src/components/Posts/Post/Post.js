@@ -22,7 +22,7 @@ const Post = ({post,setCurrentId}) => {
   
   const handleLike = async() => {
     const rr =  await dispatch(likePost(post._id));
-    if (!hasLiked &&rr) {
+    if (!hasLiked) {
       setLikes([...post.likes, userId]);
       window.location.reload();
     } else {
