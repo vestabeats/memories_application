@@ -3,7 +3,7 @@ import { Container, Grow, Grid, Paper, AppBar, TextField, Button } from '@materi
 import { useDispatch } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import ChipInput from 'material-ui-chip-input';
+//import ChipInput from 'material-ui-chip-input';
 import { getPostBySearch } from '../../actions/post';
 import Posts from '../Posts/Posts';
 import Form from '../Form/Form';
@@ -62,7 +62,7 @@ const Home = () => {
                 }}
                 
               />
-              <ChipInput style={{margin:'10px 0'}} value={tags} onAdd={handleAdd} onDelete={handleDelete} label="Search Tags" variant="outlined"/>
+              {/*<ChipInput style={{margin:'10px 0'}} value={tags} onAdd={handleAdd} onDelete={handleDelete} label="Search Tags" variant="outlined"/>*/}
               <Button onClick={searchPost} className={classes.searchButton} color='primary'   variant="contained">Search</Button>
             </AppBar>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
