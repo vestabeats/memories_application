@@ -24,10 +24,10 @@ const Post = ({post,setCurrentId}) => {
     const rr =  await dispatch(likePost(post._id));
     if (!hasLiked) {
       setLikes([...post.likes, userId]);
-      window.location.reload();
+      //window.location.reload();
     } else {
       setLikes(post.likes.filter((id) => id !== userId));
-      window.location.reload();
+     // window.location.reload();
       
     }
     
